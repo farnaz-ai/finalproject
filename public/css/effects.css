@@ -1,0 +1,246 @@
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.fill:hover,
+.fill:focus {
+  -webkit-box-shadow: inset 0 0 0 2em var(--hover);
+          box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+            box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.close:hover,
+.close:focus {
+  -webkit-box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+          box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+          box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  -webkit-box-shadow: inset 0 -3.25em 0 0 var(--hover);
+          box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  -webkit-box-shadow: inset 6.5em 0 0 0 var(--hover);
+          box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  -webkit-box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+          box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+
+.offset:hover, .offset:focus {
+  -webkit-box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+          box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.pulse {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.close {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.raise {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.up {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.slide {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.offset {
+  --color: #f7b11d;
+  --hover: #9af71d;
+}
+
+.btnEffect {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.btnEffect:hover, .btnEffect:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.btnEffect {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+
+/*------------Gradiant buttons---------*/
+.grdbuttons {
+  margin: 10%;
+  text-align: center;
+}
+
+.grdbtn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.grdbtn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.grdbtn-hover:focus {
+  outline: none;
+}
+
+.grdbtn-hover.color-1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#25aae1), color-stop(#40e495), color-stop(#30dd8a), to(#2bb673));
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.grdbtn-hover.color-2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f5ce62), color-stop(#e43603), color-stop(#fa7199), to(#e85a19));
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.grdbtn-hover.color-3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#667eea), color-stop(#764ba2), color-stop(#6B8DD6), to(#8E37D7));
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.grdbtn-hover.color-4 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#fc6076), color-stop(#ff9a44), color-stop(#ef9d43), to(#e75516));
+  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.grdbtn-hover.color-5 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0ba360), color-stop(#3cba92), color-stop(#30dd8a), to(#2bb673));
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.grdbtn-hover.color-6 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#009245), color-stop(#FCEE21), color-stop(#00A8C5), to(#D9E021));
+  background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.grdbtn-hover.color-7 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#6253e1), color-stop(#852D91), color-stop(#A3A1FF), to(#F24645));
+  background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.grdbtn-hover.color-8 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#2b5876), to(#4e4376));
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.grdbtn-hover.color-9 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#25aae1), color-stop(#4481eb), color-stop(#04befe), to(#3f86ed));
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.grdbtn-hover.color-10 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ed6ea0), color-stop(#ec8c69), color-stop(#f7186a), to(#FBB03B));
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+  -webkit-box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+          box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.grdbtn-hover.color-11 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#eb3941), color-stop(#f15e64), color-stop(#e14e53), to(#e2373f));
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+  -webkit-box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+          box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+/*# sourceMappingURL=effects.css.map */

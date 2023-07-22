@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس باما</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/contactUs.css">
+    <link rel="stylesheet" href="/css/mockup.css">
+    <link rel="stylesheet" href="/css/dist/effects.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-light">
+        <div>
+            <a class="navbar-brand" href="/">
+                <img src="/img/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="rightside-nav">
+        <button type="button" class="solidBtn"> <a href="contactUs">برای مشاوره وقت بگیرید</a> </button>
+
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"> <img src="/img/hamburger.svg" alt="">
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul class="navMenu">
+                        <li class="rd"><a href="about">درباره ما</a></li>
+                        <li class="bl"><a href="#">خدمات</a></li>
+                        <li class="yl"><a href="projects">پروژه ها</a></li>
+                        <li class="wt"><a href="blogs">مقالات</a></li>
+                        <li class="gr"><a href="contactUs">تماس باما</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="headerbg">
+            <div class="container"> 
+                <div class="main-header">
+                    
+                    <p>ما اماده ایم برای کمک.درباره ی پروژه ای که در ذهن دارید برای ما بنویسید.</p>
+                    <span class="spancolorYellow">برای ما در هر پروژه سه چیز اهمیت دارد</span>
+                </div>
+            </div>
+        </div>   
+    </header>
+
+
+    <section class="contactForm">
+
+        <div class="stepForm">
+           <form action="/contactUs" method="POST" id="msform">
+               <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="activeField">چه کسی؟</li>
+                    <li>چه چیزی؟</li>
+                    <li>چرا؟</li>
+                    <hr>
+                </ul>
+
+                <!-- fieldsets -->
+                <fieldset class="a1" >
+                    <h2 class="fs-title">چه کسی</h2>
+                    <h3 class="fs-subtitle">شما چه کسب و کاری هستید؟</h3>
+                    <div class="fs-namefield">
+                        <input dir="rtl" type="text" name="fname" placeholder="نام خانوادگی" tabindex="2" onkeydown="return (event.keyCode!=13);"/>
+                        <input dir="rtl" type="text" name="name" placeholder="نام" tabindex="1" onkeydown="return (event.keyCode!=13);"/>
+                    </div>
+                    <input id="a2" type="email" name="email" placeholder="ایمیل " tabindex="3" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/>
+                    <input type="button" name="next" class="next action-button " value="بعدی" tabindex="4"/>
+                </fieldset>
+                <fieldset class="a1">
+                    <h2 class="fs-title">چه چیزی</h2>
+                    <h3 class="fs-subtitle">کدامیک از خدمات مارا درنظر دارید؟</h3>
+                    <div class="choices mb-4">
+                        <label for="digiMark">بازاریابی دیجیتال
+                        </label>
+                        <input type="checkbox" value="بازاریابی دیجیتال" tabindex="1" name="checkboxcontactus"/>
+                        <label for="webDes">طراحی و توسعه وب و اپلیکیشن
+                        </label>
+                        <input type="checkbox" value="توسعه وب و اپلیکیشن"  tabindex="2" name="checkboxcontactus"/>
+                        <label for="trading">خدمات تریدینگ
+                        </label>
+                        <input type="checkbox" value="خدمات تریدینگ"  tabindex="3" name="checkboxcontactus"/>
+                    </div>
+                    <textarea dir="rtl" name="more" placeholder="توضیحات لازم" tabindex="4"></textarea>
+                    <input type="button" name="previous" class="previous action-button" value="قبلی" tabindex="6"/>
+                    <input type="button" name="next" class="next action-button" value="بعدی" tabindex="5"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">چرا؟</h2>
+                    <h3 class="fs-subtitle"> اهداف واقعی که برای کسب و کارتان در نظر دارید و دوست دارید انرا تحقق دهید را برای ما بنویسید </h3>
+                    <textarea dir="rtl" name="info" placeholder="توضیحات لازم"></textarea>
+                    <input type="button" name="previous" class="previous action-button" value="قبلی" />
+                    <input type="submit" name="next" class="next action-button" value="ثبت" />
+                </fieldset>
+                <!-- <fieldset id="thanksforContact">
+                    <h2 class="fs-title spancolorYellow">فرم با موفقیت ارسال شد</h2>
+                    <h3 class="fs-subtitle">مشاورین ما در اسرع وقت با شما تماس خواهند گرفت</h3>
+                    <a href="#" class="yellowBtn">رفتن به صفحه اصلی</a>
+                    <a href="#" class="grayBtn">مشاهده نمونه کارها</a>
+                </fieldset> -->
+           </form>
+        </div>
+
+        <div class="StepFormabt">
+            <h2>بعد از پر کردن فرم چه میشود؟</h2>
+            <video src=""></video>
+            <p>من مرتضی سیف الله پور هستم و شما رو مرحله به مرحله راهنمایی می کنم
+            </p>
+        </div>
+
+    </section>
+
+    <section id="ContactMiddle">
+        <div class="addressBox">
+            <h2>آدرس</h2>
+            <div>
+                <h5><span class="spunderlineBlue"> دفتر شماره یک</span> </h5>
+                <p>ساری - خیابان پیروزی - نبش پیروزی ۱۴ - ساختمان پارک علم و فناوری</p>
+
+                <p><span class="spunderlineBlue" style="font-weight: bold;">تلفن تماس</span>  </p>
+                <p>33208264-6</p>
+
+            </div>
+            <div>
+                <h5><span class="spunderlineBlue"> دفتر شماره دو</span> </h5>
+                <p>ساری-خیابان فرهنگ - روبروی تربیت بدنی استان - مجتمع تجاری شهر - طبقه دوم</p>
+                <p><span class="spunderlineBlue" style="font-weight: bold;">تلفن تماس</span>  </p>
+                <p>44430445</p>
+            </div>
+
+        </div>
+
+        <div class="social-container">
+            <ul class="social-icons">
+                <li><a href="https://instagram.com/devolutiond.ir"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="ContMidTitle">
+            <h2>
+                ما را در شبکه های اجتماع دنبال کنید تا از اخرین اخبار و پروژه های ما باخبر شوید
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <div class="supportUs ">
+        <figure class="loadsprt">
+           <a href="support">
+               <img src="img/supportUs.svg" alt="">
+           </a> 
+        </figure>
+    </div>
+    
+    <footer>
+        <div class="newsletter">
+            <h1>
+                برای دریافت <span class="spancolorYellow">مشاوره های رایگان هفتگی</span> ما
+                 درباره <span class="spancolorYellow">طراحی سایت و بازاریابی انلاین </span> ثبت نام کنید.
+                 ما ایمیل بی مورد ارسال نمیکنیم.
+                  تنها<span class="spancolorYellow"> نکات  کلیدی و مهم</span> رو به اشتراک میگذاریم.
+            </h1>
+            <form class="mt-4" method="POST" action="/newsFeed">
+                <div class="newsletter-mail">
+                    <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" name="emailnewsfeed">
+                    <input type="submit" value="همین حالا ثبت نام کن">
+                </div>
+                <div class="rules">
+                    <p>
+                        من <span class="spancolorYellow">قوانین و شرایط</span>
+                        را می پذیرم
+                    </p>
+                    <input type="checkbox">
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="footerBox">
+                <h2>
+                    درباره ما
+                </h2>
+                <hr>
+                <p>
+                    با تکیه بر خلاقیت و توانایی نیروهایمان راه حل های متفاوتی برای کسب و کارتان معرفی خواهیم کرد.
+                </p>
+            </div>
+            <div class="footerBox">
+                <h2>
+                    تماس باما
+                </h2>
+                <hr>
+                <div class="footer-address">
+                    <div style="padding-left: 1rem;">
+                        <h5 style="color: #f7b11d;">دفتر شماره یک</h5>
+                        <p>ساری - خیابان پیروزی - نبش پیروزی ۱۴ -  پارک علم و فناوری</p>
+                    </div>
+                    <div>
+                        <h5 style="color: #f7b11d;">دفتر شماره دو</h5>
+                        <p>ساری-خیابان فرهنگ - روبروی تربیت بدنی استان - مجتمع تجاری شهر - طبقه دوم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBox thirdfb">
+                <img src="/img/logo.svg" alt="" class="mb-4">
+                <p>
+                    011-33208264-6
+                </p>
+            </div>
+        </div>
+        <hr style="color: gray;">
+        <div class="down-footer">
+            <div class="footerrights">
+                <span>
+                    © 2021 devolutions Design. All rights reserved.
+                </span>
+            </div>
+            <div class="social-container">
+                <ul class="social-icons">
+                    <li><a href="https://instagram.com/devolutions.ir"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+    
+</body>
+<script src="/js/contactUs.js"></script>
+
+</html>

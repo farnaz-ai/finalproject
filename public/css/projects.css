@@ -1,0 +1,272 @@
+nav {
+  background-color: #f8f7ff;
+}
+a.navbar-brand {
+  margin-bottom: 0rem !important;
+}
+.solidBtn {
+  color: black;
+}
+.solidBtn:hover {
+  color: white;
+}
+
+.solidBtn a {
+  text-decoration: none;
+  color: #f7b11d;
+}
+.solidBtn a:hover {
+  color: #fff;
+}
+
+#projects {
+  background-image: url("../img/blogbg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45rem;
+  height: fit-content;
+  direction: rtl;
+}
+
+.projHeader {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10rem 5rem 5rem 5rem;
+  justify-content: space-between;
+}
+.projPage-title {
+  width: 55%;
+}
+.projPage-title h5 {
+  color: #8e8e93;
+}
+.projPage-title h1 {
+  color: #f7b11d;
+  font-size: 110px;
+  text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc;
+}
+.projHeader p {
+  margin-top: 6rem;
+  color: #8e8e93;
+  font-size: 24px;
+  width: 40%;
+}
+/*-----proj lists-----*/
+.projCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.projCard {
+  margin: 0 2rem 3rem 2rem;
+}
+.projCard img {
+  width: 35rem;
+}
+.projCard-content {
+  padding: 2rem;
+}
+.projTitle {
+  width: 17rem;
+  height: 17rem;
+  padding: 3rem;
+  padding-top: 4rem;
+  border-radius: 50%;
+  background-color: #f7b21dd2;
+  margin-right: -1rem;
+  margin-top: -15rem;
+  position: absolute;
+}
+.pT-black {
+  background-color: rgba(0, 0, 0, 0.747);
+  color: white;
+}
+.pT-gray {
+  background-color: #c0bfc8d0;
+}
+.projTitle-content h6 {
+  font-family: "yekan";
+  font-size: 22px;
+}
+.projTitle-content h5 {
+  font-family: "kalameh-black";
+  font-size: 32px;
+}
+.projCard a {
+  color: rgb(211, 211, 211);
+  text-decoration: underline;
+  margin: 1rem;
+}
+#projects a {
+  color: rgb(155, 153, 153) !important;
+  text-decoration: underline;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+/*----- Project Types ----*/
+#prjType {
+  width: 80%;
+  height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  justify-content: space-around;
+}
+#prjType a {
+  margin-bottom: 0!important;
+}
+.prjType-Card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  cursor: pointer;
+  height: fit-content;
+}
+.prjType-Card3 {
+  width: 230px;
+  height: 320px;
+  filter: blur(2px);
+  -webkit-filter: blur(8px);
+  transition: 0.2s;
+}
+.prjType-Card3:hover {
+  filter: none;
+  -webkit-filter: none;
+  transition: 0.2s;
+}
+.prjTypeCard1 {
+  filter: none;
+  -webkit-filter: none;
+  transition: 0.2s;
+}
+.prjType-title {
+  position: absolute;
+  width: 15rem;
+  margin-top: 16rem;
+  margin-left: 0rem;
+}
+.prjType-title h5 {
+  text-align: center;
+  font-family: "kalameh-bold" !important;
+  font-size: 28px;
+  color: white;
+}
+
+@media screen and (max-width: 920px) {
+  .projPage-title h1 {
+    color: #f7b11d;
+    font-size: 69px;
+  }
+  .projHeader p {
+    margin-top: 0rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  .prjType-Card {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .projHeader {
+    display: block;
+  }
+  .projPage-title {
+    width: 100%;
+  }
+  .projHeader p {
+    width: 100%;
+  }
+  .projCard img {
+    width: 26rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projCard {
+    margin: 0 2rem 5rem 2rem;
+  }
+  .projCard img {
+    width: 20rem;
+  }
+  .projTitle {
+    width: 15rem;
+    height: 15rem;
+    padding: 2rem;
+    padding-top: 3rem;
+    margin-right: -3rem;
+    margin-top: -12rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projTitle {
+    width: 15rem;
+    height: 15rem;
+    padding: 2rem;
+    padding-top: 3rem;
+    margin-right: 2.5rem;
+    margin-top: -10rem;
+  }
+}
+
+/*--------------------------Fonts----------------*/
+@font-face {
+  font-family: "yekan";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebRegular.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebRegular.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebRegular.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebRegular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "yekan-bold";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebBold.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebBold.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebBold.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebBold.woff2) format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "yekan-black";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebBlack.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebBlack.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebBlack.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebBlack.woff2) format("woff2");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "kalameh";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Regular.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Regular.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Regular.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Regular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "kalameh-bold";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Bold.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Bold.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Bold.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Bold.woff2) format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "kalameh-black";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Black.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Black.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Black.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Black.woff2) format("woff2");
+  font-weight: bolder;
+}

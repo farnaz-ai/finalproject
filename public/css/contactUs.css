@@ -1,0 +1,418 @@
+.solidBtn a {
+  text-decoration: none;
+  color: #f7b11d;
+}
+.solidBtn a:hover {
+  color: #fff;
+}
+.main-header .spancolorYellow {
+  font-size: 24px;
+  font-family: "yekan-bold";
+}
+header {
+  height: fit-content !important;
+}
+
+/*------------ Contact Us 3 step form -----------*/
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 40rem;
+  margin-top: -5rem;
+}
+.StepFormabt {
+  width: 420px;
+  height: 520px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.StepFormabt h2 {
+  font-size: 28px;
+}
+.StepFormabt video {
+  width: 320px;
+  height: 300px;
+  background-color: #7c8b919d;
+  border-radius: 20px;
+  margin: 2rem 1rem 2rem 1rem;
+}
+.stepForm {
+  width: 750px;
+  height: 520px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#msform {
+  margin: 50px auto;
+  position: relative;
+}
+#msform fieldset {
+  padding: 15px 0px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  text-align: right;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  background-color: #d2d2d3;
+  box-sizing: border-box;
+  font-family: "kalameh";
+  color: #2c3e50;
+  font-size: 16px;
+}
+#msform textarea,
+#msform input {
+  width: 100%;
+}
+#msform input[type="checkbox"] {
+  width: 15px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: transparent;
+  font-weight: bold;
+  border: 1px solid #f7b11d;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #f7b11d;
+  background-color: #f7b11d;
+  transition: 0.3s;
+}
+/*headings*/
+.fs-title {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #f7b11d;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.fs-namefield {
+  display: flex;
+  justify-content: space-between;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "kalameh";
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.activeField:before,
+#progressbar li.activeField:after {
+  background: #f7b11d;
+  color: white;
+}
+
+/*-----address Box and the middle part of Contact Page--------*/
+#ContactMiddle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 32rem;
+}
+.ContMidTitle {
+  width: 25%;
+  text-align: right;
+  margin-top: 8rem;
+}
+.addressBox {
+  width: 400px;
+  height: 380px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 9px;
+}
+#ContactMiddle .social-container {
+  margin-top: 8rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: space-around;
+}
+.choices label {
+  width: 25%;
+}
+
+#thanksforContact {
+  margin-top: 25%;
+}
+
+#thanksforContact,
+#thanksforContact fs-title,
+#thanksforContact fs-subtitle,
+#thanksforContact input {
+  text-align: center !important;
+  justify-content: center !important;
+}
+#thanksforContact a {
+  width: 100%;
+  text-decoration: none;
+}
+
+.addressBox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  direction: rtl;
+}
+.addressBox h2 {
+  width: 100%;
+  text-align: right;
+}
+.addressBox div {
+  text-align: right;
+  width: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+  .contactForm {
+    height: fit-content;
+    padding-bottom: 4rem;
+  }
+  .stepForm {
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    height: fit-content;
+  }
+  .contactForm {
+    height: fit-content;
+    padding-bottom: 8rem;
+  }
+  .stepForm {
+    margin-bottom: 5rem;
+  }
+  #ContactMiddle {
+    display: flex;
+    direction: rtl;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    height: fit-content;
+    text-align: right;
+    padding-bottom: 5rem;
+  }
+  .ContMidTitle {
+    width: 55%;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  #ContactMiddle .social-container {
+    width: 57%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  .stepForm {
+    width: 540px;
+  }
+  #msform fieldset {
+    width: 95%;
+    margin: 0 2%;
+  }
+}
+@media screen and (max-width: 580px) {
+  #msform input,
+  #msform textarea {
+    padding: 5px;
+  }
+  #msform fieldset {
+    width: 406px;
+    margin: 0;
+  }
+  .stepForm {
+    width: 450px;
+  }
+
+  #ContactMiddle .social-container {
+    width: 70%;
+  }
+  .ContMidTitle {
+    width: 85%;
+  }
+
+  .addressBox div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .stepForm {
+    width: 335px;
+  }
+
+  #progressbar li {
+    font-size: 14px;
+  }
+  .fs-subtitle {
+    font-size: 14px;
+  }
+  .fs-title {
+    font-size: 22px;
+  }
+  .fs-namefield {
+    display: block;
+  }
+  #msform textarea,
+  #msform input {
+    width: 70%;
+  }
+  #msform fieldset {
+    width: fit-content;
+  }
+
+  .choices label {
+    width: 80%;
+  }
+  #thanksforContact a {
+    display: grid;
+    margin-bottom: 2rem;
+  }
+
+  .StepFormabt {
+    width: 300px;
+    height: fit-content;
+  }
+  .StepFormabt video {
+    width: 221px;
+    height: 221px;
+  }
+
+  #ContactMiddle .social-container {
+    width: 100%;
+  }
+
+  .addressBox {
+    width: 300px;
+    height: fit-content;
+  }
+}
+
+/*--------------------------Fonts----------------*/
+@font-face {
+  font-family: "yekan";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebRegular.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebRegular.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebRegular.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebRegular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "yekan-bold";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebBold.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebBold.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebBold.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebBold.woff2) format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "yekan-black";
+  src: url(../fonts/IranYekanWeb/ttf/IRANYekanWebBlack.ttf) format("truetype"),
+    url(../fonts/IranYekanWeb/eot/IRANYekanWebBlack.eot) format("eot"),
+    url(../fonts/IranYekanWeb/woff/IRANYekanWebBlack.woff) format("woff"),
+    url(../fonts/IranYekanWeb/woff2/IRANYekanWebBlack.woff2) format("woff2");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "kalameh";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Regular.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Regular.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Regular.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Regular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "kalameh-bold";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Bold.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Bold.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Bold.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Bold.woff2) format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "kalameh-black";
+  src: url(../fonts/KalamehWeb/ttf/KalamehWeb_Black.ttf) format("truetype"),
+    url(../fonts/KalamehWeb/eot/KalamehWeb_Black.eot) format("eot"),
+    url(../fonts/KalamehWeb/woff/KalamehWeb_Black.woff) format("woff"),
+    url(../fonts/KalamehWeb/woff2/KalamehWeb_Black.woff2) format("woff2");
+  font-weight: bolder;
+}

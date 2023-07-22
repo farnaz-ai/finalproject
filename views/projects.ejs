@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه ها</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="/css/dist/effects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.min.csss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.transitions.min.csss">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-light">
+        <div>
+            <a class="navbar-brand" href="/">
+                <img src="/img/logo-black.svg" alt="">
+            </a>
+        </div>
+        <div class="rightside-nav">
+        <button type="button" class="solidBtn"> <a href="contactUs">برای مشاوره وقت بگیرید</a> </button>
+
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">            <img src="/img/hamburger-black.svg" alt="">
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                    <ul class="navMenu">
+                        <li class="rd"><a href="/about">درباره ما</a></li>
+                        <li class="bl"><a href="#">خدمات</a></li>
+                        <li class="yl"><a href="/projects">پروژه ها</a></li>
+                        <li class="wt"><a href="/blogs">مقالات</a></li>
+                        <li class="gr"><a href="/contactUs">تماس باما</a></li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    
+
+    <section id="projects">
+        <div class="projHeader">
+            <div class="projPage-title">
+                <h5>پروژه های ویژه</h5>
+                <h1>
+                    از پروژه های ما الهام بگیرید
+                </h1>
+            </div>
+            <p>از طراحی برند ارایشی اموتیا گرفته تا پروژه های هوش  مصنوعی ...
+                 ما با هرنوع برند و بینسی کارکرده ایم و نتایج موفقیت امیزی داشته ایم</p>
+        </div>
+
+
+        <section id="prjType">
+            <div class="prjType-Card">
+                <a style="text-decoration: none;color: #fff;" href="application"> 
+                    <img class="prjType-Card3  <%= route=='app'? class1 : '' %> " src="/img/prjtypeimg.svg" alt="">
+                    <div class="prjType-title">
+                    <h5>اپلیکیشن</h5>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="prjType-Card">
+                <a style="text-decoration: none;color: #fff;" href="webdev">
+                <img class="prjType-Card3  <%= route=='webdev'?class1 : '' %> " src="/img/prjtypeimg.svg" alt="">
+                <div class="prjType-title">
+                    <h5>طراحی سایت</h5>
+                </div>
+                </a> 
+            </div>
+    
+            <div class="prjType-Card">
+                <a style="text-decoration: none;color: #fff;" href="branding">
+                <img class="prjType-Card3  <%= route=='brand'?class1: '' %>" src="/img/prjtypeimg.svg" alt="">
+                <div class="prjType-title">
+                    <h5>برندینگ</h5>
+                </div>
+                </a> 
+            </div>
+    
+            <div class="prjType-Card">
+                <a style="text-decoration: none;color: #fff;" href="digitallmarketing">
+                <img class="prjType-Card3  <%= route=='dm'?class1:'' %> " src="/img/prjtypeimg.svg" alt="">
+                <div class="prjType-title">
+                    <h5>دیجیتال مارکتینگ</h5>
+                </div>
+                </a> 
+            </div>
+    
+    
+        </section>
+
+        <section class="projCards">
+            <%  projectss.forEach(function(project){ %>
+            <div class="projCard">
+                <img src="<%=project.image%>  " alt=""> 
+                <div class="projTitle pT-black">
+                    <div class="projTitle-content">
+                        <h6><%=project.projectTitle %> </h6>
+                        <h5><%=project.projectName %> </h5>
+                        <br>
+                        <a href=" /projects/<%= project._id %> ">مشاهده پروژه</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+
+        </div>
+        <!-- <a class="ViewMore" href="#"> مشاهده بیشتر </a> -->
+    </section>
+
+
+
+    <section id="prjType">
+        <div class="prjType-Card">
+            <a style="text-decoration: none;color: #fff;" href="application"> 
+                <img class="prjType-Card3  <%= route=='app'? class1 : '' %> " src="/img/prjtypeimg.svg" alt="">
+                <div class="prjType-title">
+                <h5>اپلیکیشن</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="prjType-Card">
+            <a style="text-decoration: none;color: #fff;" href="webdev">
+            <img class="prjType-Card3  <%= route=='webdev'?class1 : '' %> " src="/img/prjtypeimg.svg" alt="">
+            <div class="prjType-title">
+                <h5>طراحی سایت</h5>
+            </div>
+        </section>
+
+
+
+        
+        <footer>
+        <div class="newsletter">
+            <h1>
+                برای دریافت <span class="spancolorYellow">مشاوره های رایگان هفتگی</span> ما
+                 درباره <span class="spancolorYellow">طراحی سایت و بازاریابی انلاین </span> ثبت نام کنید.
+                 ما ایمیل بی مورد ارسال نمیکنیم.
+                  تنها<span class="spancolorYellow"> نکات  کلیدی و مهم</span> رو به اشتراک میگذاریم.
+            </h1>
+            <form class="mt-4" method="POST" action="/newsFeed">
+                <div class="newsletter-mail">
+                    <input id="email" type="email" placeholder="ایمیل خود را وارد کنید" name="emailnewsfeed">
+                    <input type="submit" value="همین حالا ثبت نام کن">
+                </div>
+                <div class="rules">
+                    <p>
+                        من <span class="spancolorYellow">قوانین و شرایط</span>
+                        را می پذیرم
+                    </p>
+                    <input type="checkbox">
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="footerBox">
+                <h2>
+                    درباره ما
+                </h2>
+                <hr>
+                <p>
+                    با تکیه بر خلاقیت و توانایی نیروهایمان راه حل های متفاوتی برای کسب و کارتان معرفی خواهیم کرد.
+                </p>
+            </div>
+            <div class="footerBox">
+                <h2>
+                    تماس باما
+                </h2>
+                <hr>
+                <div class="footer-address">
+                    <div style="padding-left: 1rem;">
+                        <h5 style="color: #f7b11d;">دفتر شماره یک</h5>
+                        <p>ساری - خیابان پیروزی - نبش پیروزی ۱۴ -  پارک علم و فناوری</p>
+                    </div>
+                    <div>
+                        <h5 style="color: #f7b11d;">دفتر شماره دو</h5>
+                        <p>ساری-خیابان فرهنگ - روبروی تربیت بدنی استان - مجتمع تجاری شهر - طبقه دوم</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBox thirdfb">
+                <img src="/img/logo.svg" alt="" class="mb-4">
+                <p>
+                    011-33208264-6
+                </p>
+            </div>
+        </div>
+        <hr style="color: gray;">
+        <div class="down-footer">
+            <div class="footerrights">
+                <span>
+                    © 2021 devolutions Design. All rights reserved.
+                </span>
+            </div>
+            <div class="social-container">
+                <ul class="social-icons">
+                    <li><a href="https://instagram.com/devolutions.ir"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </footer>
+    <div class="supportUs ">
+        <figure class="loadsprt">
+           <a href="support">
+               <img src="img/supportUs.svg" alt="">
+           </a> 
+        </figure>
+    </div>
+</body>
+</html>
